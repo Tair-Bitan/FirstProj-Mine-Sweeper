@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <title>First Sprint</title>
+</head>
+
+<body onload="chosenLevel('EASY')">
+    <div class="elements-container">
+        <h1>Mine Sweeper</h1>
+        <!-- <h2>Choose your level</h2> -->
+        <button class="buttons easy" onclick="chosenLevel('EASY')">BABY SWEEPER</button>
+        <button class="buttons medium" onclick="chosenLevel('MEDIUM')">PRO SWEEPER</button>
+        <button class="buttons hard" onclick="chosenLevel('HARD')">BOMB SQUAD</button> <br>
+
+        <div class="feature-container">
+            <span class="life">❤️</span>
+            <span class="life lifeCount">3</span>
+            <span class="safe" onclick="safeClick()">🛡️</span>
+            <span class="safe safeCount">3</span>
+            <span class="timer">0.0</span>
+            <span class="hintSign hintSign1" onclick="removeHint(this)"><img src="img\bulb-on.png"></span>
+            <span class="hintSign hintSign2" onclick="removeHint(this)"><img src="img\bulb-on.png"></span>
+            <span class="hintSign hintSign3" onclick="removeHint(this)"><img src="img\bulb-on.png"></span>
+
+        </div>
+        <div class="smiley" onclick="stopTimer(), resetGame()">😁</div>
+        <table border="0" cellpadding="10" oncontextmenu="return false;"></table>
+    </div>
+    <span class="scoreBoard">
+        <span>They Have Lived To Tell The Tail <br> 🏆 <br> <br></span>
+        <span>Baby Sweeper: <br></span>
+        <span class="baby"> ---------</span>
+        <span> <br> Those Who Play For Fun <br> <br></span>
+        <span>Pro Sweeper: <br></span>
+        <span class="pro"> --------- </span>
+        <span><br> Only The Brave <br> <br></span>
+        <span>Bomb Squad: <br></span>
+        <span class="squad"> --------- </span>
+        <span><br> No One Has Ever Dared <br> <br></span>
+        <button class="resetScore" onclick="resetBestScore()">Reset Scores</button>
+    </span>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
